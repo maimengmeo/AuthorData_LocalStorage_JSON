@@ -1,0 +1,15 @@
+{	
+	"SheridanData" : {
+		"FullName" : "Tuyet Mai Pham",
+		"StudentID" : "991545166",
+		"UserName" : "phamtuye",
+		"Program" : "SDNE"	
+	},
+	"Authors" : [
+		{"authorName" : "J. K. Rowling", "picture" : "images/jk_rowling.jpeg"},
+		{"authorName" : "Stephan King", "picture" : "images/stephan_king.jpeg"},
+		{"authorName" : "Vladirmir Nabokov", "picture" : "images/vladimir_nobokov.jpeg" },
+		{"authorName" : "William Shakespeare", "picture" : "images/william_shakespeare.jpg"}	
+	],
+    "Reference" : "https://openlibrary.org/developers/api"
+}
