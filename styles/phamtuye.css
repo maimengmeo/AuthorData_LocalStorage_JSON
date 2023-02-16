@@ -1,0 +1,10 @@
+header {
+    text-align: center;
+    background-color: #e6ccb2;
+}
+footer {
+    text-align: center;
+    background-color: #e6ccb2;
+    /* position: fixed;
+    bottom: 0; */
+}
