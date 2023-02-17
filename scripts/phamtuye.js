@@ -28,7 +28,6 @@ async function startUp() {
             console.log(student);
             loadHeader(student);
             loadFooter(cite);
-            loadAuthors(authorArray);
         })
     
     function loadInfo(dataJSON) {
@@ -38,8 +37,8 @@ async function startUp() {
                     studentInfo.UserName, studentInfo.Program);
 
         let authors = dataJSON.Authors;
-        for(let [index, author] of authors) {
-            let au = new Author(author.authorName, author.picture);
+        for(let [index, value] of authors.entries()) {
+            let au = new Author(value.authorName, value.picture);
             authorArray.push(au);
 
             //create div container for each author
@@ -48,14 +47,14 @@ async function startUp() {
             
             //create author thumbnail image
             let authorImg = document.createElement("img");
-            authorImg.src = author.picture;
+            authorImg.src = value.picture;
             authorImg.classList.add("author-thumbnail-img");
 
             //create anchor tag with author's name
             let authorNameLink = document.createElement("a");
             authorNameLink.href = "otherPages/author-info.html";
-            authorNameLink.innerText = author.authorName;
-            authorNameLink.onclick = `selectAuthor(${index}, ${authorArray})`;
+            authorNameLink.innerText = value.authorName;
+            authorNameLink.addEventListener("click", () => selectAuthor(index, authorArray));
 
             let linebreak = document.createElement("br");
 
@@ -71,7 +70,7 @@ async function startUp() {
     }
 
     function loadHeader(student) {
-        document.querySelector('#header-text').innerHTML = 
+        document.querySelector('header').innerHTML = 
         `
             <h4>Assignment #2/ Winter 2023<br>
             My Name: ${student.FullName}/ Student ID: ${student.StudentID}/ 
@@ -82,13 +81,15 @@ async function startUp() {
     function loadFooter(cite) {
         document.querySelector('footer').innerHTML = 
         `
-            <b>${cite}</b>
+        <b>Reference: <a href="${cite}">${cite}</a></b>
         `
     }
 
     function selectAuthor(index, authorArray) {
         localStorage.setItem("rowID", index);
+        localStorage.setItem("cite", cite);
         localStorage.setItem("authorArray", JSON.stringify(authorArray));
+        localStorage.setItem("student", JSON.stringify(student));
     }
 }
 

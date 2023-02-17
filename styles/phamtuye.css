@@ -2,6 +2,12 @@ body {
     background-color: #fcf8f5;
 }
 
+header {
+    text-align: center;
+    background-color: #e6ccb2;
+    
+}
+
 footer {
     text-align: center;
     background-color: #e6ccb2;
@@ -27,8 +33,17 @@ p {
     height: 190px;
 }
 
-#header-text {
-    text-align: center;
-    background-color: #e6ccb2;
-    
+.grid-area {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    margin: 30px auto;
 }
+
+.left-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
