@@ -41,29 +41,49 @@ function loadFooter(cite) {
 
 function loadAuthorInfo(externalAuthorData) {
     let authorInfo = document.querySelector('.right-panel');
-     authorInfo.innerHTML = 
+    let table = 
     `
-        <p>Author Name: ${externalAuthorData.docs[0].name}</p>
-        <p>Birth Date: ${externalAuthorData.docs[0].birth_date}</p>
+        <table>
+        <tbody>
+            <tr>
+                <td><b>Author Name:</b></td>
+                <td>${externalAuthorData.docs[0].name}</td>
+            </tr>
+            <tr>
+                <td><b>Birth Date:</b></td>
+                <td>${externalAuthorData.docs[0].birth_date}</td>
+            </tr>
     `;
 
     if(externalAuthorData.docs[0].death_date) {
-        authorInfo.innerHTML += 
+        table += 
         `
-            <p>Death Date: ${externalAuthorData.docs[0].death_date}</p>
+            <tr>
+                <td><b>Death Date:</b></td>
+                <td>${externalAuthorData.docs[0].death_date}</td>
+            </tr>
         `
     } else {
-        authorInfo.innerHTML += 
+        table += 
         `
-            <p>Death Date: Undefined</p>
+            <tr>
+                <td><b>Death Date:</b></td>
+                <td>Undefined</td>
+            </tr>
         `
     }
 
-    authorInfo.innerHTML += 
+    table += 
         `
-            <p>Top Work: ${externalAuthorData.docs[0].top_work}</p>
+            <tr>
+                <td><b>Top Work:</b></td>
+                <td>${externalAuthorData.docs[0].top_work}</td>
+            </tr>
+            </tbody>
+            </table>
         `
 
+    authorInfo.innerHTML = table;
 }
 
 function LoadAuthorPic(pic) {
@@ -73,4 +93,9 @@ function LoadAuthorPic(pic) {
     `;
     
 }
+
+//question:
+//author list format
+//dob undefined
+//function scope
 
