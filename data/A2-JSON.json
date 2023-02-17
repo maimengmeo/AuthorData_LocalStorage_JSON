@@ -8,7 +8,7 @@
 	"Authors" : [
 		{"authorName" : "J. K. Rowling", "picture" : "images/jk_rowling.jpeg"},
 		{"authorName" : "Stephan King", "picture" : "images/stephan_king.jpeg"},
-		{"authorName" : "Vladirmir Nabokov", "picture" : "images/vladimir_nobokov.jpeg" },
+		{"authorName" : "Hans Christian Andersen", "picture" : "images/HansChristianAndersen.jpeg" },
 		{"authorName" : "William Shakespeare", "picture" : "images/william_shakespeare.jpg"}	
 	],
     "Reference" : "https://openlibrary.org/developers/api"

@@ -1,10 +1,34 @@
-header {
-    text-align: center;
-    background-color: #e6ccb2;
+body {
+    background-color: #fcf8f5;
 }
+
 footer {
     text-align: center;
     background-color: #e6ccb2;
-    /* position: fixed;
-    bottom: 0; */
+}
+
+p {
+    text-align: center;
+}
+
+.author-list {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.author-container {
+    width: 20%;
+    margin: calc(20%/8);
+    text-align: center;
+}
+
+.author-thumbnail-img {
+    width: 80%;
+    height: 190px;
+}
+
+#header-text {
+    text-align: center;
+    background-color: #e6ccb2;
+    
 }
