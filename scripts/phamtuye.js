@@ -59,8 +59,8 @@ function loadInfo(dataJSON) {
 
         let linebreak = document.createElement("br");
 
-        authorContainer.appendChild(authorImg);
-        authorContainer.appendChild(linebreak);
+        authorNameLink.prepend(linebreak);
+        authorNameLink.prepend(authorImg);
         authorContainer.appendChild(authorNameLink);
 
         document.querySelector(".author-list").appendChild(authorContainer);

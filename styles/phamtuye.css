@@ -16,6 +16,7 @@ footer {
 p {
     text-align: center;
     font-size: 20px;
+    color: #3f2413;
 }
 
 table {
@@ -49,7 +50,7 @@ table tr td:first-child {
 .grid-area {
     display: grid;
     grid-template-columns: 2fr 3fr;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .left-panel {
